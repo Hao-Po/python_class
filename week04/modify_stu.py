@@ -6,8 +6,6 @@ def main(student_list):
         if student[0] == name:
             exist = True
             break
-        else:
-            exist = False
 
     if exist:
         try:
@@ -21,5 +19,5 @@ def main(student_list):
             print("  You need to input number")
     else:
         print(f"    The name {name} is not found")
-    
+
     return student_list

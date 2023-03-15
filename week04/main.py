@@ -1,12 +1,17 @@
-import add_stu, del_stu, modify_stu, print_all
+import add_stu
+import del_stu
+import modify_stu
+import print_all
 import re
+
 
 class EXIT:
     def main(self):
         return
 
+
 def main():
-    ## NOTE: NO if else elif judgements are allowed in the main function !!!!
+    # NOTE: NO if else elif judgements are allowed in the main function !!!!
     student_list = read_student_file()
     select_result = 0
 
@@ -14,7 +19,7 @@ def main():
         # call main functions in add_stu, del_stu, modify_stu, print_all here
         try:
             select_result = print_menu()
-            select_regex = re.match('[0-4]', str(select_result))
+            select_regex = re.match(r"[0-4]$", str(select_result))
             switch = [add_stu, del_stu, modify_stu, print_all, EXIT]
             switch[int(select_regex.group())].main(student_list)
         except KeyboardInterrupt:
@@ -23,8 +28,9 @@ def main():
             return
         except:
             print("You need to input number 0 ~ 4")
-    
+
     restore_student_file(student_list)
+
 
 def read_student_file():
     student_list = list()
@@ -39,6 +45,7 @@ def read_student_file():
 
     return student_list
 
+
 def restore_student_file(student_list):
     # restore student list to file here
     try:
@@ -47,6 +54,7 @@ def restore_student_file(student_list):
                 fp.write(f"{student[0]}:{student[1]}\n")
     except:
         pass
+
 
 def print_menu():
     print()
@@ -58,5 +66,6 @@ def print_menu():
     selection = int(input("Please select: "))
 
     return selection
+
 
 main()

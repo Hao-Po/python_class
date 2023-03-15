@@ -1,13 +1,11 @@
 def main(student_list):
     name = input("  Please input a student's name: ")
-    
+
     exist = False
     for student in student_list:
         if student[0] == name:
             exist = True
             break
-        else:
-            exist = False
 
     if exist:
         print("  The student already exists")
@@ -24,10 +22,3 @@ def main(student_list):
             print("  You need to input number")
 
     return student_list
-
-
-
-
-
-
-
