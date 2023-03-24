@@ -26,7 +26,7 @@ Please select: add
   Please input Bill's Python score or < 0 for discarding the subject: 80 
   Please input a subject name or exit for ending: Chinese
   Please input Bill's Chinese score or < 0 for discarding the subject: jjj
-    Wrong format with reason could not convert string to float: 'jjj', try again
+!!!    Wrong format with reason could not convert string to float: 'jjj', try again
   Please input Bill's Chinese score or < 0 for discarding the subject: -8
   Please input a subject name or exit for ending: English
   Please input Bill's English score or < 0 for discarding the subject: 90
